@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JetBrains Design</title>
+
+    <!-- Style -->
+    <link href="assets/css/jetbrains.css" rel="stylesheet">
+    <link href="assets/css/components.css" rel="stylesheet">
+    <!-- End style -->
+</head>
+<body class="">
+<!-- Theme change  -->
+<script src="assets/js/theme.js"></script>
+<!-- End theme change  -->
+
+    <div style="padding: 20px">
+        <h1>Theme change</h1>
+        <br><br>
+        <button onclick="setLightTheme()" class="btn btn-secondary">Light</button>
+        <button onclick="setDarkTheme()" class="btn btn-secondary">Dark</button>
+        <button onclick="setSystemTheme()" class="btn btn-secondary">System</button>
+    </div>
+
+    <hr>
+
+    <div style="padding: 20px">
+        <h1>H1</h1><br>
+        <h2>H2</h2><br>
+        <h3>H3</h3><br>
+        <h4>H4</h4><br>
+        <h5>H5</h5><br>
+        <h6>H6</h6><br>
+
+        <span>⌘⌥A</span>
+    </div>
+
+    <!-- Gradient -->
+    <div style="padding: 20px">
+        <div style="width: 500px; height: 40px; background: var(--gradient-1)"></div><br>
+        <div style="width: 500px; height: 40px; background: var(--gradient-2)"></div><br>
+        <div style="width: 500px; height: 40px; background: var(--gradient-3)"></div><br>
+        <div style="width: 500px; height: 40px; background: var(--gradient-4)"></div><br>
+        <div style="width: 500px; height: 40px; background: var(--gradient-5)"></div><br>
+        <div style="width: 500px; height: 40px; background: var(--gradient-6)"></div><br>
+        <div style="width: 500px; height: 40px; background: var(--gradient-7)"></div><br>
+        <div style="width: 500px; height: 40px; background: var(--gradient-8)"></div><br>
+        <div style="width: 500px; height: 40px; background: var(--gradient-9)"></div><br>
+    </div>
+    <!-- End gradient -->
+
+    <!-- Buttons -->
+    <div style="padding: 20px">
+        <button class="btn btn-secondary btn-min-size">Secondary</button>
+        <button class="btn btn-primary btn-min-size">Primary</button>
+        <button class="btn btn-success btn-min-size">Success</button>
+        <button class="btn btn-danger btn-min-size">Danger</button>
+        <button class="btn btn-warning btn-min-size">Warning</button>
+        <button class="btn btn-light btn-min-size">Light</button>
+        <button class="btn btn-dark btn-min-size">Dark</button>
+        <button class="btn btn-primary btn-min-size" disabled>Disabled</button>
+        <button class="btn btn-stop"></button>
+        <button class="btn btn-help">?</button>
+    </div>
+    <!-- End buttons -->
+
+    <!-- Checkbox -->
+    <div style="padding: 20px">
+        <div>
+            <input class="checkbox" type="checkbox" id="checkbox-1" >
+            <label for="checkbox-1">Text</label>
+        </div>
+        <div>
+            <input class="checkbox" type="checkbox" id="checkbox-2" >
+            <label for="checkbox-2">Text</label>
+        </div>
+    </div>
+    <!-- End checkbox -->
+
+    <!-- Radio -->
+    <div style="padding: 20px">
+        <div class="form-check">
+            <input class="radio" type="radio" name="flexRadioDefault" id="radio-1">
+            <label for="radio-1">
+                Default radio
+            </label>
+        </div>
+        <div class="form-check">
+            <input class="radio" type="radio" name="flexRadioDefault" id="radio-2" checked>
+            <label for="radio-2">
+                Default checked radio
+            </label>
+        </div>
+    </div>
+    <!-- End radio -->
+
+    <!-- Input -->
+    <div style="padding: 20px">
+        <input class="input" value="text">
+        <br><br>
+        <input class="input input-fill" value="text">
+        <br><br>
+        <input class="input input-fill" value="text" type="password">
+        <br><br>
+        <input class="input input-validated" value="text">
+        <br><br>
+        <input class="input" value="text" disabled>
+    </div>
+    <!-- End input -->
+
+    <!-- Select -->
+    <div style="padding: 20px">
+        <div class="select">
+            <button id="select-btn-1" class="select__button">select</button>
+            <ul class="select__list">
+                <li class="select__list-item" data-value="8">8 pt</li>
+                <li class="select__list-item" data-value="9">9 pt</li>
+                <li class="select__list-item" data-value="10">10 pt</li>
+                <li class="select__list-item" data-value="11">11 pt</li>
+                <li class="select__list-item" data-value="12">12 pt</li>
+                <li class="select__list-item" data-value="13">13 pt</li>
+                <li class="select__list-item" data-value="14">14 pt</li>
+                <li class="select__list-item" data-value="15">15 pt</li>
+            </ul>
+            <input value="" type="hidden" name="select-data" class="select__input">
+        </div>
+
+        <br>
+
+        <div class="select">
+            <button id="select-btn-2" class="select__button">select</button>
+            <ul class="select__list">
+                <li class="select__list-item" data-value="8">8 pt</li>
+                <li class="select__list-item" data-value="9">9 pt</li>
+                <li class="select__list-item" data-value="10">10 pt</li>
+            </ul>
+            <input value="" type="hidden" name="select-data" class="select__input">
+        </div>
+    </div>
+    <!-- End select -->
+
+    <!-- Link -->
+    <div style="padding: 20px">
+        <a class="link" href="#">Link</a>
+        <span class="link link-disabled" href="#">Link</span>
+    </div>
+    <!-- End link -->
+
+    <!-- Modal -->
+    <div style="padding: 20px">
+        <button class="btn btn-secondary" onclick="showModal1()">Show modal</button>
+        <button class="btn btn-secondary" onclick="showModal2()">Show modal 2</button>
+
+        <div class="modal" id="modal-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="modal-title">Modal</div>
+                    </div>
+                    <div class="modal-body"></div>
+                    <div class="modal-footer">
+                        <div class="modal-footer-content">
+                            <button class="btn btn-help" onclick="closeModal1()">?</button>
+                            <div class="modal-fotter-buttons">
+                                <button class="btn btn-secondary btn-min-size" onclick="closeModal1()">Cancel</button>
+                                <button class="btn btn-secondary btn-min-size" disabled onclick="closeModal1()">Apply</button>
+                                <button class="btn btn-primary btn-min-size" onclick="closeModal1()">OK</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="modal" id="modal-2">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="modal-title">Modal 2</div>
+                    </div>
+                    <div class="modal-body">
+                        <h1>Test</h1>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="modal-footer-content">
+                            <button class="btn btn-help" onclick="closeModal2()">?</button>
+                            <div class="modal-fotter-buttons">
+                                <button class="btn btn-secondary" onclick="closeModal2()">Cancel</button>
+                                <button class="btn btn-secondary" disabled onclick="closeModal2()">Apply</button>
+                                <button class="btn btn-primary" onclick="closeModal2()">OK</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Modal -->
+
+    <!-- Hr -->
+    <div style="padding: 20px">
+        Hr
+        <hr>
+    </div>
+    <!-- End ht -->
+
+    <!-- Table -->
+    <div style="padding: 20px">
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th>Column</th>
+                <th>Column</th>
+                <th>Column</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Text</td>
+                <td>Text</td>
+                <td>Text</td>
+            </tr>
+            <tr>
+                <td>Text</td>
+                <td>Text</td>
+                <td>Text</td>
+            </tr>
+            <tr>
+                <td>Text</td>
+                <td>Text</td>
+                <td>Text</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <br>
+
+        <table class="table table-stroke">
+            <thead>
+            <tr>
+                <th>Column</th>
+                <th>Column</th>
+                <th>Column</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Text</td>
+                <td>Text</td>
+                <td>Text</td>
+            </tr>
+            <tr>
+                <td>Text</td>
+                <td>Text</td>
+                <td>Text</td>
+            </tr>
+            <tr>
+                <td>Text</td>
+                <td>Text</td>
+                <td>Text</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- End table -->
+
+    <!-- Tab -->
+    <div style="padding: 20px">
+        <ul class="tabs">
+            <li>Info</li>
+            <li class="tab-selected">Versions</li>
+            <li>Encryption</li>
+            <li>Tags</li>
+        </ul>
+    </div>
+    <!-- End tab -->
+
+    <!-- Tree -->
+    <div style="padding: 20px">
+        <ul class="tree">
+            <li><div class="tree-item">Level 1</div></li>
+            <li>
+                <div class="tree-item tree-active">Level 1</div>
+                <ul class="tree-nested">
+                    <li><div class="tree-item">Level 2</div></li>
+                    <li><div class="tree-item">Level 2</div></li>
+                    <li>
+                        <div class="tree-item">Level 2</div>
+                        <ul class="tree-nested">
+                            <li><div class="tree-item">Level 3</div></li>
+                            <li><div class="tree-item">Level 3</div></li>
+                            <li><div class="tree-item">Level 3</div></li>
+                            <li><div class="tree-item">Level 3</div></li>
+                        </ul>
+                    </li>
+                    <li><div class="tree-item">Level 2</div></li>
+                </ul>
+            </li>
+            <li><div class="tree-item">Level 1</div></li>
+            <li><div class="tree-item">Level 1</div></li>
+        </ul>
+
+        <br>
+
+        <ul class="tree">
+            <li><div class="tree-item">Level 1</div></li>
+            <li>
+                <div class="tree-item tree-active">
+                    Level 1
+                    <span class="tree-item-hint">/Users/jetbrains/IdeaProjects/Hello</span>
+                </div>
+                <ul class="tree-nested">
+                    <li><div class="tree-item tree-item-danger">Level 2</div></li>
+                    <li><div class="tree-item tree-item-warning">Level 2</div></li>
+                    <li>
+                        <div class="tree-item tree-active tree-item-success">Level 2</div>
+                        <ul class="tree-nested">
+                            <li><div class="tree-item">Level 3</div></li>
+                            <li><div class="tree-item">Level 3</div></li>
+                            <li><div class="tree-item">Level 3</div></li>
+                            <li><div class="tree-item">Level 3</div></li>
+                        </ul>
+                    </li>
+                    <li><div class="tree-item">Level 2</div></li>
+                </ul>
+            </li>
+            <li><div class="tree-item">Level 1</div></li>
+            <li><div class="tree-item">Level 1</div></li>
+        </ul>
+    </div>
+    <!-- End tree -->
+
+    <!-- Circle background -->
+    <div style="padding: 20px">
+        <div class="circle-background" style="width: 300px; height: 500px; margin: 10px; display: inline-block" hovercolor="red"></div>
+        <div class="circle-background" style="width: 300px; height: 500px; margin: 10px; display: inline-block"></div>
+    </div>
+    <!-- End  circle background  -->
+
+    <!-- Loader -->
+    <div style="padding: 20px">
+        <div class="loader loader-small"></div>
+        <div class="loader"></div>
+    </div>
+    <!-- End loader -->
+
+    <!-- Progress -->
+    <div style="padding: 20px">
+        <div class="input-group">
+            <label class="progress-label" for="file">Indexing...</label>
+            <progress id="file" max="100" value="70" class="progress"></progress>
+            <button class="btn btn-stop"></button>
+        </div>
+    </div>
+    <!-- End progress -->
+
+    <!-- Segment -->
+    <div style="padding: 20px">
+        <ul class="segment">
+            <li>Java</li>
+            <li class="segment-active">Kotlin</li>
+            <li>Groovy</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+        </ul>
+
+        <br>
+
+        <ul class="segment segment-disabled">
+            <li>Java</li>
+            <li class="segment-active">Kotlin</li>
+            <li>Groovy</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+        </ul>
+    </div>
+    <!-- End segment -->
+
+    <!-- Block -->
+    <div style="padding: 20px">
+        <div class="block">test</div>
+    </div>
+    <!-- End block -->
+
+    <!-- Code -->
+    <div style="padding: 20px">
+        <code>print('Hello world', 0123456789) -> >=</code>
+    </div>
+    <!-- End code -->
+
+
+    <!-- Scripts -->
+    <script src="assets/js/jetbrains.js"></script>
+    <!-- End scripts -->
+</body>
+</html>
