@@ -15,7 +15,7 @@
     <!-- End style -->
 
     <script>
-        const PAGE_SELECTED = 'Typography'
+        const PAGE_SELECTED = 'Drop-down'
         const PATH = '../'
     </script>
 </head>
@@ -44,17 +44,35 @@
 
                 <div class="col-xl-10 col-sm-6 grid-margin stretch-card tasks-groups-list">
                     <div class="content-wrapper">
-                        <h1>Typography</h1>
+
+                        <h1>Drop down</h1><br>
+
+                        <div class="drop-down" >
+                            <a id="drop-down-btn-1" class="drop-down__button">Drop down left</a>
+                            <ul class="drop-down__list">
+                                <li class="drop-down__list-item" data-value="8"><h6>Профиль</h6></li>
+                                <li class="drop-down__list-delimiter"></li>
+                                <li class="drop-down__list-item" data-value="8"><a class="link link-default " href="#">Реактор тестов</a></li>
+                                <li class="drop-down__list-item" data-value="8"><a class="link link-default " href="#">Отчимтить кеш</a></li>
+                                <li class="drop-down__list-delimiter"></li>
+                                <li class="drop-down__list-item" data-value="8"><a class="link link-default " href="#">Выход</a></li>
+                            </ul>
+                        </div>
+
                         <br>
 
-                        <h1>H1</h1><br>
-                        <h2>H2</h2><br>
-                        <h3>H3</h3><br>
-                        <h4>H4</h4><br>
-                        <h5>H5</h5><br>
-                        <h6>H6</h6><br>
+                        <div class="drop-down" >
+                            <a id="drop-down-btn-2" class="drop-down__button">Drop down right</a>
+                            <ul class="drop-down__list drop-down__list-right">
+                                <li class="drop-down__list-item" data-value="8"><h6>Профиль</h6></li>
+                                <li class="drop-down__list-delimiter"></li>
+                                <li class="drop-down__list-item" data-value="8"><a class="link link-default " href="#">Реактор тестов</a></li>
+                                <li class="drop-down__list-item" data-value="8"><a class="link link-default " href="#">Отчимтить кеш</a></li>
+                                <li class="drop-down__list-delimiter"></li>
+                                <li class="drop-down__list-item" data-value="8"><a class="link link-default " href="#">Выход</a></li>
+                            </ul>
+                        </div>
 
-                        <span>⌘⌥A</span>
                     </div>
                 </div>
             </div>

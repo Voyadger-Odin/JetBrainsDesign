@@ -15,8 +15,35 @@
     <!-- End style -->
 
     <script>
-        const PAGE_SELECTED = 'Select'
+        const PAGE_SELECTED = 'All_components'
+        const PATH = './'
     </script>
+
+    <style>
+        .img-preview{
+            width: 100%;
+        }
+
+        .open-figma-block{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .open-figma{
+            width: max-content;
+            display: inline;
+            text-align: center;
+            text-decoration: none;
+            color: var(--gray-1);
+            border: 1px solid var(--gray-1);
+            border-radius: 100px;
+            margin: 20px;
+            padding: 10px 20px;
+        }
+        .open-figma:hover{
+            background: var(--gray-12);
+        }
+    </style>
 </head>
 <body class="theme-dark">
 <!-- Theme change  -->
@@ -25,36 +52,7 @@
 
 <div class="page">
     <!-- Header -->
-    <header class="d-flex flex-wrap justify-content-md-between mb-4 px-4 border-bottom">
-        <!-- Gradient -->
-        <div class="gradient" style="background: var(--gradient-4)"></div>
-        <a href="#" class="link link-default link-underline-none tb ms-2 d-flex align-items-center" >
-            <img src="assets/img/Contest.png" class="logo me-2">
-            <h6>JetBrains Design</h6>
-        </a>
-
-        <div class="text-end d-inline-flex align-items-center">
-            <a class="link link-default tb ms-3 d-inline-flex align-items-center" href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github me-2" viewBox="0 0 16 16">
-                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
-                </svg> GitHub</a>
-            <a class="link link-default tb ms-3 d-inline-flex align-items-center" href="#">Главная</a>
-            <a class="link link-default tb ms-3 d-inline-flex align-items-center" href="#">Компиляторы и ошибки</a>
-            <a class="link link-default tb ms-3 d-inline-flex align-items-center" href="#">Обзор</a>
-
-            <div class="drop-down ms-3" >
-                <a id="drop-down-btn-1" class="drop-down__button">Drop down</a>
-                <ul class="drop-down__list drop-down__list-right">
-                    <li class="drop-down__list-item" data-value="8"><h6>Профиль</h6></li>
-                    <li class="drop-down__list-delimiter"></li>
-                    <li class="drop-down__list-item" data-value="8"><a class="link link-default " href="#">Реактор тестов</a></li>
-                    <li class="drop-down__list-item" data-value="8"><a class="link link-default " href="#">Отчимтить кеш</a></li>
-                    <li class="drop-down__list-delimiter"></li>
-                    <li class="drop-down__list-item" data-value="8"><a class="link link-default " href="#">Выход</a></li>
-                </ul>
-            </div>
-        </div>
-    </header>
+    <header class="d-flex flex-wrap justify-content-md-between mb-4 px-4 border-bottom" id="header"></header>
     <!-- End header -->
 
     <!-- Body -->
@@ -62,20 +60,491 @@
         <div class="content-wrapper">
             <div class="row">
                 <div class="col-xl-2 col-sm-6 grid-margin stretch-card tasks-groups-list">
-                    <div class="content-wrapper p-0">
-                        <h6>Компоненты</h6>
+                    <div class="content-wrapper p-3">
+                        <h5 class="mb-3">Компоненты</h5>
                         <ul class="tree" id="components-list">
-                            <li><a href="#" class="link link-default link-none"><div class="tree-item">Level 1</div></a></li>
-                            <li><div class="tree-item tree-item-selected tree-active">Level 1</div></li>
-                            <li><div class="tree-item">Level 1</div></li>
-                            <li><div class="tree-item">Level 1</div></li>
+
                         </ul>
                     </div>
                 </div>
 
                 <div class="col-xl-10 col-sm-6 grid-margin stretch-card tasks-groups-list">
-                    <div class="content-wrapper" style="background: red">
-                        123
+                    <div class="content-wrapper">
+                        <img src="../info/img/_Figma%20Cover.png" class="img-preview" alt="preview">
+
+                        <div class="open-figma-block">
+                            <a class="open-figma" href="https://www.figma.com/community/file/1227732692272811382" target="_blank">Открыть в Figma</a>
+                        </div>
+
+                        <hr>
+
+                        <!-- Typography -->
+                        <div style="padding: 20px">
+                            <h6>Typography</h6><br>
+
+                            <h1>H1</h1><br>
+                            <h2>H2</h2><br>
+                            <h3>H3</h3><br>
+                            <h4>H4</h4><br>
+                            <h5>H5</h5><br>
+                            <h6>H6</h6><br>
+
+                            <span>⌘⌥A</span>
+                        </div>
+                        <!-- End typography -->
+
+                        <!-- Gradient -->
+                        <div style="padding: 20px">
+                            <h6>Gradient</h6><br>
+
+                            <div style="width: 500px; height: 40px; background: var(--gradient-1)"></div><br>
+                            <div style="width: 500px; height: 40px; background: var(--gradient-2)"></div><br>
+                            <div style="width: 500px; height: 40px; background: var(--gradient-3)"></div><br>
+                            <div style="width: 500px; height: 40px; background: var(--gradient-4)"></div><br>
+                            <div style="width: 500px; height: 40px; background: var(--gradient-5)"></div><br>
+                            <div style="width: 500px; height: 40px; background: var(--gradient-6)"></div><br>
+                            <div style="width: 500px; height: 40px; background: var(--gradient-7)"></div><br>
+                            <div style="width: 500px; height: 40px; background: var(--gradient-8)"></div><br>
+                            <div style="width: 500px; height: 40px; background: var(--gradient-9)"></div><br>
+                        </div>
+                        <!-- End gradient -->
+
+                        <!-- Buttons -->
+                        <div style="padding: 20px">
+                            <h6>Buttons</h6><br>
+
+                            <button class="btn btn-secondary btn-min-size">Secondary</button>
+                            <button class="btn btn-primary btn-min-size">Primary</button>
+                            <button class="btn btn-success btn-min-size">Success</button>
+                            <button class="btn btn-danger btn-min-size">Danger</button>
+                            <button class="btn btn-warning btn-min-size">Warning</button>
+                            <button class="btn btn-light btn-min-size">Light</button>
+                            <button class="btn btn-dark btn-min-size">Dark</button>
+                            <button class="btn btn-primary btn-min-size" disabled>Disabled</button>
+                            <button class="btn btn-stop"></button>
+                            <button class="btn btn-help">?</button>
+                        </div>
+                        <!-- End buttons -->
+
+                        <!-- Checkbox -->
+                        <div style="padding: 20px">
+                            <h6>Checkbox</h6><br>
+
+                            <div>
+                                <input class="checkbox" type="checkbox" id="checkbox-1" >
+                                <label for="checkbox-1">Text</label>
+                            </div>
+                            <div>
+                                <input class="checkbox" type="checkbox" id="checkbox-2" >
+                                <label for="checkbox-2">Text</label>
+                            </div>
+                        </div>
+                        <!-- End checkbox -->
+
+                        <!-- Radio -->
+                        <div style="padding: 20px">
+                            <h6>Radio</h6><br>
+
+                            <div class="form-check">
+                                <input class="radio" type="radio" name="flexRadioDefault" id="radio-1">
+                                <label for="radio-1">
+                                    Default radio
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="radio" type="radio" name="flexRadioDefault" id="radio-2" checked>
+                                <label for="radio-2">
+                                    Default checked radio
+                                </label>
+                            </div>
+                        </div>
+                        <!-- End radio -->
+
+                        <!-- Input -->
+                        <div style="padding: 20px">
+                            <h6>Input</h6><br>
+
+                            <input class="input" value="text">
+                            <br><br>
+                            <input class="input input-fill" value="text">
+                            <br><br>
+                            <input class="input input-fill" value="text" type="password">
+                            <br><br>
+                            <input class="input input-validated" value="text">
+                            <br><br>
+                            <input class="input" value="text" disabled>
+                            <br><br>
+
+                            Large
+                            <br><br>
+
+                            <input class="input input-large" value="text">
+                            <br><br>
+                            <input class="input input-large input-fill" value="text">
+                            <br><br>
+                            <input class="input input-large input-fill" value="text" type="password">
+                            <br><br>
+                            <input class="input input-large input-validated" value="text">
+                            <br><br>
+                            <input class="input input-large" value="text" disabled>
+                            <br><br>
+                        </div>
+                        <!-- End input -->
+
+                        <!-- Select -->
+                        <div style="padding: 20px">
+                            <h6>Select</h6><br>
+
+                            <div class="select">
+                                <button id="select-btn-1" class="select__button">select</button>
+                                <ul class="select__list">
+                                    <li class="select__list-item" data-value="8">Select font size</li>
+                                    <li class="select__list-delimiter"></li>
+                                    <li class="select__list-item" data-value="8">8 pt</li>
+                                    <li class="select__list-item" data-value="9">9 pt</li>
+                                    <li class="select__list-item" data-value="10">10 pt</li>
+                                    <li class="select__list-item" data-value="11">11 pt</li>
+                                    <li class="select__list-item" data-value="12">12 pt</li>
+                                    <li class="select__list-item" data-value="13">13 pt</li>
+                                    <li class="select__list-item" data-value="14">14 pt</li>
+                                    <li class="select__list-item" data-value="15">15 pt</li>
+                                </ul>
+                                <input value="" type="hidden" name="select-data" class="select__input">
+                            </div>
+
+                            <br>
+
+                            <div class="select select-large">
+                                <button id="select-btn-2" class="select__button">select</button>
+                                <ul class="select__list">
+                                    <li class="select__list-item" data-value="8">Select font size</li>
+                                    <li class="select__list-delimiter"></li>
+                                    <li class="select__list-item" data-value="8">8 pt</li>
+                                    <li class="select__list-item" data-value="9">9 pt</li>
+                                    <li class="select__list-item" data-value="10">10 pt</li>
+                                </ul>
+                                <input value="" type="hidden" name="select-data" class="select__input">
+                            </div>
+                        </div>
+                        <!-- End select -->
+
+                        <!-- Drop down -->
+                        <div style="padding: 20px">
+                            <h6>Drop down</h6><br>
+
+                            <div class="drop-down" >
+                                <a id="drop-down-btn-1" class="drop-down__button">Drop down left</a>
+                                <ul class="drop-down__list">
+                                    <li class="drop-down__list-item" data-value="8"><h6>Профиль</h6></li>
+                                    <li class="drop-down__list-delimiter"></li>
+                                    <li class="drop-down__list-item" data-value="8"><a class="link link-default " href="#">Реактор тестов</a></li>
+                                    <li class="drop-down__list-item" data-value="8"><a class="link link-default " href="#">Отчимтить кеш</a></li>
+                                    <li class="drop-down__list-delimiter"></li>
+                                    <li class="drop-down__list-item" data-value="8"><a class="link link-default " href="#">Выход</a></li>
+                                </ul>
+                            </div>
+
+                            <br>
+
+                            <div class="drop-down" >
+                                <a id="drop-down-btn-2" class="drop-down__button">Drop down right</a>
+                                <ul class="drop-down__list drop-down__list-right">
+                                    <li class="drop-down__list-item" data-value="8"><h6>Профиль</h6></li>
+                                    <li class="drop-down__list-delimiter"></li>
+                                    <li class="drop-down__list-item" data-value="8"><a class="link link-default " href="#">Реактор тестов</a></li>
+                                    <li class="drop-down__list-item" data-value="8"><a class="link link-default " href="#">Отчимтить кеш</a></li>
+                                    <li class="drop-down__list-delimiter"></li>
+                                    <li class="drop-down__list-item" data-value="8"><a class="link link-default " href="#">Выход</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- End drop down -->
+
+                        <!-- Link -->
+                        <div style="padding: 20px">
+                            <h6>Link</h6><br>
+
+                            <a class="link" href="#">Link</a>
+                            <span class="link link-disabled" href="#">Link</span>
+                        </div>
+                        <!-- End link -->
+
+                        <!-- Modal -->
+                        <div style="padding: 20px">
+                            <h6>Modal</h6><br>
+
+                            <button class="btn btn-secondary" onclick="showModal1()">Show modal</button>
+                            <button class="btn btn-secondary" onclick="showModal2()">Show modal 2</button>
+
+                            <div class="modal" id="modal-1">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <div class="modal-title">Modal</div>
+                                        </div>
+                                        <div class="modal-body"></div>
+                                        <div class="modal-footer">
+                                            <div class="modal-footer-content">
+                                                <button class="btn btn-help" onclick="closeModal1()">?</button>
+                                                <div class="modal-fotter-buttons">
+                                                    <button class="btn btn-secondary btn-min-size" onclick="closeModal1()">Cancel</button>
+                                                    <button class="btn btn-secondary btn-min-size" disabled onclick="closeModal1()">Apply</button>
+                                                    <button class="btn btn-primary btn-min-size" onclick="closeModal1()">OK</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="modal" id="modal-2">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <div class="modal-title">Modal 2</div>
+                                        </div>
+                                        <div class="modal-body">
+                                            <h1>Test</h1>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <div class="modal-footer-content">
+                                                <button class="btn btn-help" onclick="closeModal2()">?</button>
+                                                <div class="modal-fotter-buttons">
+                                                    <button class="btn btn-secondary" onclick="closeModal2()">Cancel</button>
+                                                    <button class="btn btn-secondary" disabled onclick="closeModal2()">Apply</button>
+                                                    <button class="btn btn-primary" onclick="closeModal2()">OK</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Modal -->
+
+                        <!-- Hr -->
+                        <div style="padding: 20px">
+                            <h6>Hr</h6><br>
+
+                            <hr>
+                        </div>
+                        <!-- End ht -->
+
+                        <!-- Table -->
+                        <div style="padding: 20px">
+                            <h6>Table</h6><br>
+
+                            <table class="table table-hover">
+                                <thead>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Column</th>
+                                    <th>Column</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Text</td>
+                                    <td>Text</td>
+                                    <td>Text</td>
+                                </tr>
+                                <tr>
+                                    <td>Text</td>
+                                    <td>Text</td>
+                                    <td>Text</td>
+                                </tr>
+                                <tr>
+                                    <td>Text</td>
+                                    <td>Text</td>
+                                    <td>Text</td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                            <br>
+
+                            <table class="table table-stroke">
+                                <thead>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Column</th>
+                                    <th>Column</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>Text</td>
+                                    <td>Text</td>
+                                    <td>Text</td>
+                                </tr>
+                                <tr>
+                                    <td>Text</td>
+                                    <td>Text</td>
+                                    <td>Text</td>
+                                </tr>
+                                <tr>
+                                    <td>Text</td>
+                                    <td>Text</td>
+                                    <td>Text</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- End table -->
+
+                        <!-- Tab -->
+                        <div style="padding: 20px">
+                            <h6>Tab</h6><br>
+
+                            <ul class="tabs">
+                                <li>Info</li>
+                                <li class="tab-selected">Versions</li>
+                                <li>Encryption</li>
+                                <li>Tags</li>
+                            </ul>
+                        </div>
+                        <!-- End tab -->
+
+                        <!-- Tree -->
+                        <div style="padding: 20px">
+                            <h6>Tree</h6><br>
+
+                            <label>One click</label><br>
+                            <ul class="tree">
+                                <li><div class="tree-item">Level 1</div></li>
+                                <li>
+                                    <div class="tree-item tree-active">Level 1</div>
+                                    <ul class="tree-nested">
+                                        <li><div class="tree-item">Level 2</div></li>
+                                        <li><div class="tree-item">Level 2</div></li>
+                                        <li>
+                                            <div class="tree-item">Level 2</div>
+                                            <ul class="tree-nested">
+                                                <li><div class="tree-item">Level 3</div></li>
+                                                <li><div class="tree-item">Level 3</div></li>
+                                                <li><div class="tree-item">Level 3</div></li>
+                                                <li><div class="tree-item">Level 3</div></li>
+                                            </ul>
+                                        </li>
+                                        <li><div class="tree-item">Level 2</div></li>
+                                    </ul>
+                                </li>
+                                <li><div class="tree-item">Level 1</div></li>
+                                <li><div class="tree-item">Level 1</div></li>
+                            </ul>
+
+                            <br>
+
+                            <label>Double click</label><br>
+                            <ul class="tree" dblclick>
+                                <li><div class="tree-item">Level 1</div></li>
+                                <li>
+                                    <div class="tree-item tree-active">
+                                        Level 1
+                                        <span class="tree-item-hint">/Users/jetbrains/IdeaProjects/Hello</span>
+                                    </div>
+                                    <ul class="tree-nested">
+                                        <li><div class="tree-item tree-item-danger">Level 2</div></li>
+                                        <li><div class="tree-item tree-item-warning">Level 2</div></li>
+                                        <li>
+                                            <div class="tree-item tree-active tree-item-success">Level 2</div>
+                                            <ul class="tree-nested">
+                                                <li><div class="tree-item">Level 3</div></li>
+                                                <li><div class="tree-item">Level 3</div></li>
+                                                <li><div class="tree-item">Level 3</div></li>
+                                                <li><div class="tree-item">Level 3</div></li>
+                                            </ul>
+                                        </li>
+                                        <li><div class="tree-item">Level 2</div></li>
+                                    </ul>
+                                </li>
+                                <li><div class="tree-item">Level 1</div></li>
+                                <li><div class="tree-item">Level 1</div></li>
+                            </ul>
+                        </div>
+                        <!-- End tree -->
+
+                        <!-- Circle background -->
+                        <div style="padding: 20px">
+                            <h6>Circle background</h6><br>
+
+                            <div class="circle-background" style="width: 300px; height: 500px; margin: 10px; display: inline-block" hovercolor="red"></div>
+                            <div class="circle-background" style="width: 300px; height: 500px; margin: 10px; display: inline-block"></div>
+                        </div>
+                        <!-- End  circle background  -->
+
+                        <!-- Loader -->
+                        <div style="padding: 20px">
+                            <h6>Loader</h6><br>
+
+                            <div class="loader loader-small"></div>
+                            <div class="loader"></div>
+                        </div>
+                        <!-- End loader -->
+
+                        <!-- Progress -->
+                        <div style="padding: 20px">
+                            <h6>Progress</h6><br>
+
+                            <div class="progress">
+                                <div class="progress-loader">
+                                    <label class="progress-label" for="file">Indexing...</label>
+                                    <progress id="file" max="100" value="70" class="progress-bar"></progress>
+                                </div>
+                            </div>
+
+                            <br><br><br>
+
+                            <div class="progress">
+                                <div class="progress-loader progress-vertical">
+                                    <label class="progress-label-top" for="file-2">Updating indices...</label>
+                                    <progress id="file-2" max="100" value="70" class="progress-bar"></progress>
+                                    <label class="progress-label" for="file-2">C:/Users/jetbrains/.rvm/gems/ruby-2.3.3/active_job</label>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End progress -->
+
+                        <!-- Segment -->
+                        <div style="padding: 20px">
+                            <h6>Segment</h6><br>
+
+                            <ul class="segment">
+                                <li>Java</li>
+                                <li class="segment-active">Kotlin</li>
+                                <li>Groovy</li>
+                                <li>JavaScript</li>
+                                <li>Python</li>
+                            </ul>
+
+                            <br>
+
+                            <ul class="segment segment-disabled">
+                                <li>Java</li>
+                                <li class="segment-active">Kotlin</li>
+                                <li>Groovy</li>
+                                <li>JavaScript</li>
+                                <li>Python</li>
+                            </ul>
+                        </div>
+                        <!-- End segment -->
+
+                        <!-- Block -->
+                        <div style="padding: 20px">
+                            <h6>Block</h6><br>
+
+                            <div class="block">test</div>
+                        </div>
+                        <!-- End block -->
+
+                        <!-- Code -->
+                        <div style="padding: 20px">
+                            <h6>Code</h6><br>
+
+                            <code>print('Hello world', 0123456789) -> >=</code>
+                        </div>
+                        <!-- End code -->
                     </div>
                 </div>
             </div>
@@ -84,32 +553,16 @@
     <!-- End body -->
 
     <!-- Footer -->
-    <footer class="text-center">
-        <!-- Copyright -->
-        <div class="text-end d-inline-flex align-items-center p-4">
-            <span class="tb">© 2023 Все права защищены.</span>
-            <a class="link tb ms-3 d-inline-flex align-items-center" href="https://github.com/Voyadger-Odin" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github me-2" viewBox="0 0 16 16">
-                    <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
-                </svg>
-                <span style="margin-left: 5px">Voyadger-Odin</span>
-            </a>
-            <a class="link tb ms-3 d-inline-flex align-items-center" href="https://t.me/rosetomorrow" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16">
-                    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"></path>
-                </svg>
-                <span style="margin-left: 5px">rosetomorrow</span>
-            </a>
-        </div>
-        <!-- Copyright -->
-    </footer>
+    <footer class="text-center" id="footer"></footer>
     <!-- End footer -->
 </div>
 
 
 <!-- Scripts -->
 <script src="assets/js/jetbrains.js"></script>
-<script src="src/js/index.js"></script>
+<script src="components/header.js"></script>
+<script src="components/menu.js"></script>
+<script src="components/footer.js"></script>
 <!-- End scripts -->
 </body>
 </html>

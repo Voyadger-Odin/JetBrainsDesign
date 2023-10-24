@@ -1,5 +1,9 @@
 
 const components_list = {
+    'All_components': {
+        'title': 'All components',
+        'href': './' + PATH + 'index.html',
+    },
     'Colors': {
         'title': 'Colors',
         'href': './' + PATH + 'pages/colors.html',
@@ -8,69 +12,65 @@ const components_list = {
         'title': 'Typography',
         'href': './' + PATH + 'pages/typography.html',
     },
-    'Gradient': {
-        'title': 'Gradient',
-        'href': '#',
-    },
     'Buttons': {
         'title': 'Buttons',
-        'href': '#',
+        'href': './' + PATH + 'pages/buttons.html',
     },
     'Checkbox': {
         'title': 'Checkbox + Radio',
-        'href': '#',
+        'href': './' + PATH + 'pages/checkbox_radio.html',
     },
     'Input': {
         'title': 'Input',
-        'href': '#',
+        'href': './' + PATH + 'pages/input.html',
     },
     'Select': {
         'title': 'Select',
-        'href': '#',
+        'href': './' + PATH + 'pages/select.html',
     },
     'Drop-down': {
         'title': 'Drop down',
-        'href': '#',
+        'href': './' + PATH + 'pages/drop_down.html',
     },
     'Link': {
         'title': 'Link',
-        'href': '#',
+        'href': './' + PATH + 'pages/link.html',
     },
     'Modal': {
         'title': 'Modal',
-        'href': '#',
+        'href': './' + PATH + 'pages/modal.html',
     },
     'Table': {
         'title': 'Table',
-        'href': '#',
+        'href': './' + PATH + 'pages/table.html',
     },
     'Tab': {
         'title': 'Tab',
-        'href': '#',
+        'href': './' + PATH + 'pages/tab.html',
     },
     'Tree': {
         'title': 'Tree',
-        'href': '#',
+        'href': './' + PATH + 'pages/tree.html',
     },
     'Circle-background': {
         'title': 'Circle background',
-        'href': '#',
+        'href': './' + PATH + 'pages/circle_background.html',
     },
     'Loader+Progress': {
         'title': 'Loader + Progress',
-        'href': '#',
+        'href': './' + PATH + 'pages/loader.html',
     },
     'Segment': {
         'title': 'Segment',
-        'href': '#',
+        'href': './' + PATH + 'pages/segment.html',
     },
     'Block': {
         'title': 'Block',
-        'href': '#',
+        'href': './' + PATH + 'pages/block.html',
     },
     'Code': {
         'title': 'Code',
-        'href': '#',
+        'href': './' + PATH + 'pages/code.html',
     },
 
 }

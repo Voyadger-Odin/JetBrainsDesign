@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sample</title>
+    <link rel="icon" type="image/x-icon" href="../assets/img/Contest.ico">
+
+    <!-- Style -->
+    <link href="../assets/css/jetbrains.css" rel="stylesheet">
+    <link href="../assets/css/jetbrains-components.css" rel="stylesheet">
+    <link href="../assets/css/bootstrap-grid.css" rel="stylesheet">
+    <!-- End style -->
+
+    <script>
+        const PAGE_SELECTED = 'Modal'
+        const PATH = '../'
+    </script>
+</head>
+<body class="theme-dark">
+<!-- Theme change  -->
+<script src="../assets/js/theme.js"></script>
+<!-- End theme change  -->
+
+<div class="page">
+    <!-- Header -->
+    <header class="d-flex flex-wrap justify-content-md-between mb-4 px-4 border-bottom" id="header"></header>
+    <!-- End header -->
+
+    <!-- Body -->
+    <div class="main-panel align-items-center pt-0">
+        <div class="content-wrapper">
+            <div class="row">
+                <div class="col-xl-2 col-sm-6 grid-margin stretch-card tasks-groups-list">
+                    <div class="content-wrapper p-3">
+                        <h5 class="mb-3">Компоненты</h5>
+                        <ul class="tree" id="components-list">
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-xl-10 col-sm-6 grid-margin stretch-card tasks-groups-list">
+                    <div class="content-wrapper">
+
+                        <h1>Modal</h1><br>
+
+                        <button class="btn btn-secondary" onclick="showModal1()">Show modal</button>
+                        <button class="btn btn-secondary" onclick="showModal2()">Show modal 2</button>
+
+                        <div class="modal" id="modal-1">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <div class="modal-title">Modal</div>
+                                    </div>
+                                    <div class="modal-body"></div>
+                                    <div class="modal-footer">
+                                        <div class="modal-footer-content">
+                                            <button class="btn btn-help" onclick="closeModal1()">?</button>
+                                            <div class="modal-fotter-buttons">
+                                                <button class="btn btn-secondary btn-min-size" onclick="closeModal1()">Cancel</button>
+                                                <button class="btn btn-secondary btn-min-size" disabled onclick="closeModal1()">Apply</button>
+                                                <button class="btn btn-primary btn-min-size" onclick="closeModal1()">OK</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="modal" id="modal-2">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <div class="modal-title">Modal 2</div>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h1>Test</h1>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <div class="modal-footer-content">
+                                            <button class="btn btn-help" onclick="closeModal2()">?</button>
+                                            <div class="modal-fotter-buttons">
+                                                <button class="btn btn-secondary" onclick="closeModal2()">Cancel</button>
+                                                <button class="btn btn-secondary" disabled onclick="closeModal2()">Apply</button>
+                                                <button class="btn btn-primary" onclick="closeModal2()">OK</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End body -->
+
+    <!-- Footer -->
+    <footer class="text-center" id="footer"></footer>
+    <!-- End footer -->
+</div>
+
+
+<!-- Scripts -->
+<script src="../assets/js/jetbrains.js"></script>
+<script src="../components/header.js"></script>
+<script src="../components/menu.js"></script>
+<script src="../components/footer.js"></script>
+<!-- End scripts -->
+</body>
+</html>
