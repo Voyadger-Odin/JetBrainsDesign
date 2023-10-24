@@ -1,0 +1,1922 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sample</title>
+    <link rel="icon" type="image/x-icon" href="../assets/img/Contest.ico">
+
+    <!-- Style -->
+    <link href="../assets/css/jetbrains.css" rel="stylesheet">
+    <link href="../assets/css/jetbrains-components.css" rel="stylesheet">
+    <link href="../assets/css/bootstrap-grid.css" rel="stylesheet">
+    <!-- End style -->
+
+    <script>
+        const PAGE_SELECTED = 'Colors'
+        const PATH = '../'
+    </script>
+
+    <style>
+        .color-swath{
+            display: block;
+            width: 48px;
+            height: 48px;
+            border-radius: 8px;
+        }
+
+        .color-specs{
+            color: var(--blue-4);
+            margin-right: 15px;
+        }
+        /* Dark theme */
+            .theme-dark>* .color-specs{
+                color: var(--blue-6);
+                margin-right: 15px;
+            }
+        /* End dark theme */
+
+        .theme-light-block{
+            border: 1px solid #eee;
+            border-radius: 8px 8px 0 0;
+            background: #fff;
+            color: #000;
+        }
+
+        .theme-dark-block{
+            border-radius: 0 0 8px 8px;
+        }
+
+    </style>
+</head>
+<body class="theme-dark">
+<!-- Theme change  -->
+<script src="../assets/js/theme.js"></script>
+<!-- End theme change  -->
+
+<div class="page">
+    <!-- Header -->
+    <header class="d-flex flex-wrap justify-content-md-between mb-4 px-4 border-bottom" id="header"></header>
+    <!-- End header -->
+
+    <!-- Body -->
+    <div class="main-panel align-items-center pt-0">
+        <div class="content-wrapper">
+            <div class="row">
+                <div class="col-xl-2 col-sm-6 grid-margin stretch-card tasks-groups-list">
+                    <div class="content-wrapper p-3">
+                        <h5 class="mb-3">Компоненты</h5>
+                        <ul class="tree" id="components-list">
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-xl-10 col-sm-6 grid-margin stretch-card tasks-groups-list">
+                    <div class="content-wrapper">
+
+                        <!-- Gradient -->
+                        <h3 class="mb-3">Gradient</h3>
+                        <div class="theme-light theme-light-block p-3">
+                            <h4 class="mb-3">Light theme</h4>
+
+                            --gradient-1
+                            <div style="width: 500px; height: 40px; background: linear-gradient(90deg, rgba(245, 212, 193, 0.00) 0%, #F5D4C1 21.18%, rgba(245, 212, 193, 0.00) 100%)"></div><br>
+                            --gradient-2
+                            <div style="width: 500px; height: 40px; background: linear-gradient(90deg, rgba(238, 226, 189, 0.00) 0%, #EEE2BD 21.18%, rgba(238, 226, 189, 0.00) 100%)"></div><br>
+                            --gradient-3
+                            <div style="width: 500px; height: 40px; background: linear-gradient(90deg, rgba(219, 231, 201, 0.00) 0%, #DBE7C9 21.18%, rgba(219, 231, 201, 0.00) 100%)"></div><br>
+                            --gradient-4
+                            <div style="width: 500px; height: 40px; background: linear-gradient(90deg, rgba(204, 235, 209, 0.00) 0%, #CCEBD1 21.18%, rgba(204, 235, 209, 0.00) 100%)"></div><br>
+                            --gradient-5
+                            <div style="width: 500px; height: 40px; background: linear-gradient(90deg, rgba(190, 228, 225, 0.00) 0%, #BEE4E1 21.18%, rgba(190, 228, 225, 0.00) 100%)"></div><br>
+                            --gradient-6
+                            <div style="width: 500px; height: 40px; background: linear-gradient(90deg, rgba(202, 223, 234, 0.00) 0%, #CADFEA 21.18%, rgba(202, 223, 234, 0.00) 100%)"></div><br>
+                            --gradient-7
+                            <div style="width: 500px; height: 40px; background: linear-gradient(90deg, rgba(219, 216, 239, 0.00) 0%, #DBD8EF 21.18%, rgba(219, 216, 239, 0.00) 100%)"></div><br>
+                            --gradient-8
+                            <div style="width: 500px; height: 40px; background: linear-gradient(90deg, rgba(223, 204, 244, 0.00) 0%, #DFCCF4 21.18%, rgba(223, 204, 244, 0.00) 100%)"></div><br>
+                            --gradient-9
+                            <div style="width: 500px; height: 40px; background: linear-gradient(90deg, rgba(238, 215, 245, 0.00) 0%, #EED7F5 21.18%, rgba(238, 215, 245, 0.00) 100%)"></div><br>
+                        </div>
+                        <div class="theme-dark theme-dark-block p-3">
+                            <h4 class="mb-3">Dark theme</h4>
+
+                            --gradient-1
+                            <div style="width: 500px; height: 40px; background: linear-gradient(90deg, rgba(101, 75, 64, 0.00) 0%, #654B40 21.18%, rgba(101, 75, 64, 0.00) 100%)"></div><br>
+                            --gradient-2
+                            <div style="width: 500px; height: 40px; background: linear-gradient(90deg, rgba(83, 76, 51, 0.00) 0%, #534C33 21.18%, rgba(83, 76, 51, 0.00) 100%)"></div><br>
+                            --gradient-3
+                            <div style="width: 500px; height: 40px; background: linear-gradient(90deg, rgba(69, 80, 56, 0.00) 0%, #455038 21.18%, rgba(69, 80, 56, 0.00) 100%)"></div><br>
+                            --gradient-4
+                            <div style="width: 500px; height: 40px; background: linear-gradient(90deg, rgba(62, 85, 64, 0.00) 0%, #3E5540 21.18%, rgba(62, 85, 64, 0.00) 100%)"></div><br>
+                            --gradient-5
+                            <div style="width: 500px; height: 40px; background: linear-gradient(90deg, rgba(29, 71, 68, 0.00) 0%, #1D4744 21.35%, rgba(29, 71, 68, 0.00) 100%)"></div><br>
+                            --gradient-6
+                            <div style="width: 500px; height: 40px; background: linear-gradient(90deg, rgba(49, 81, 95, 0.00) 0%, #31515F 21.18%, rgba(49, 81, 95, 0.00) 100%)"></div><br>
+                            --gradient-7
+                            <div style="width: 500px; height: 40px; background: linear-gradient(90deg, rgba(52, 76, 125, 0.00) 0%, #344C7D 21.18%, rgba(52, 76, 125, 0.00) 100%)"></div><br>
+                            --gradient-8
+                            <div style="width: 500px; height: 40px; background: linear-gradient(90deg, rgba(79, 62, 101, 0.00) 0%, #4F3E65 21.18%, rgba(79, 62, 101, 0.00) 100%)"></div><br>
+                            --gradient-9
+                            <div style="width: 500px; height: 40px; background: linear-gradient(90deg, rgba(93, 53, 74, 0.00) 0%, #5D354A 21.18%, rgba(93, 53, 74, 0.00) 100%)"></div><br>
+                        </div>
+                        <!-- End gradient -->
+
+                        <!-- Colors -->
+                        <h3 class="mb-3">Colors</h3>
+                        <div class="theme-light theme-light-block p-3">
+                            <h4 class="mb-3">Light theme</h4>
+
+                            <!-- Gray -->
+                            <h5 class="mb-3">Gray</h5>
+                            <table class="table  mb-3">
+                                <thead>
+                                <tr>
+                                    <th>Swatch</th>
+                                    <th>Color name</th>
+                                    <th>Specs</th>
+                                    <th>Usages</th>
+                                </tr>
+                                </thead>
+                                <tbody id="table-gray-body"></tbody>
+                            </table>
+
+                            <!-- Blue -->
+                            <h5 class="mb-3">Blue</h5>
+                            <table class="table  mb-3">
+                                <thead>
+                                <tr>
+                                    <th>Swatch</th>
+                                    <th>Color name</th>
+                                    <th>Specs</th>
+                                    <th>Usages</th>
+                                </tr>
+                                </thead>
+                                <tbody id="table-blue-body"></tbody>
+                            </table>
+
+                            <!-- Green -->
+                            <h5 class="mb-3">Green</h5>
+                            <table class="table  mb-3">
+                                <thead>
+                                <tr>
+                                    <th>Swatch</th>
+                                    <th>Color name</th>
+                                    <th>Specs</th>
+                                    <th>Usages</th>
+                                </tr>
+                                </thead>
+                                <tbody id="table-green-body"></tbody>
+                            </table>
+
+                            <!-- Red -->
+                            <h5 class="mb-3">Red</h5>
+                            <table class="table  mb-3">
+                                <thead>
+                                <tr>
+                                    <th>Swatch</th>
+                                    <th>Color name</th>
+                                    <th>Specs</th>
+                                    <th>Usages</th>
+                                </tr>
+                                </thead>
+                                <tbody id="table-red-body"></tbody>
+                            </table>
+
+                            <!-- Yellow -->
+                            <h5 class="mb-3">Yellow</h5>
+                            <table class="table  mb-3">
+                                <thead>
+                                <tr>
+                                    <th>Swatch</th>
+                                    <th>Color name</th>
+                                    <th>Specs</th>
+                                    <th>Usages</th>
+                                </tr>
+                                </thead>
+                                <tbody id="table-yellow-body"></tbody>
+                            </table>
+
+                            <!-- Orange -->
+                            <h5 class="mb-3">Orange</h5>
+                            <table class="table  mb-3">
+                                <thead>
+                                <tr>
+                                    <th>Swatch</th>
+                                    <th>Color name</th>
+                                    <th>Specs</th>
+                                    <th>Usages</th>
+                                </tr>
+                                </thead>
+                                <tbody id="table-orange-body"></tbody>
+                            </table>
+
+                            <!-- Purple -->
+                            <h5 class="mb-3">Purple</h5>
+                            <table class="table  mb-3">
+                                <thead>
+                                <tr>
+                                    <th>Swatch</th>
+                                    <th>Color name</th>
+                                    <th>Specs</th>
+                                    <th>Usages</th>
+                                </tr>
+                                </thead>
+                                <tbody id="table-purple-body"></tbody>
+                            </table>
+
+                            <!-- Teal -->
+                            <h5 class="mb-3">Teal</h5>
+                            <table class="table  mb-3">
+                                <thead>
+                                <tr>
+                                    <th>Swatch</th>
+                                    <th>Color name</th>
+                                    <th>Specs</th>
+                                    <th>Usages</th>
+                                </tr>
+                                </thead>
+                                <tbody id="table-teal-body"></tbody>
+                            </table>
+                        </div>
+                        <div class="theme-dark theme-dark-block p-3">
+                            <h4 class="mb-3">Dark theme</h4>
+
+                            <!-- Gray dark -->
+                            <h5 class="mb-3">Gray</h5>
+                            <table class="table  mb-3">
+                                <thead>
+                                <tr>
+                                    <th>Swatch</th>
+                                    <th>Color name</th>
+                                    <th>Specs</th>
+                                    <th>Usages</th>
+                                </tr>
+                                </thead>
+                                <tbody id="table-gray-dark-body"></tbody>
+                            </table>
+
+                            <!-- Blue dark -->
+                            <h5 class="mb-3">Blue</h5>
+                            <table class="table  mb-3">
+                                <thead>
+                                <tr>
+                                    <th>Swatch</th>
+                                    <th>Color name</th>
+                                    <th>Specs</th>
+                                    <th>Usages</th>
+                                </tr>
+                                </thead>
+                                <tbody id="table-blue-dark-body"></tbody>
+                            </table>
+
+                            <!-- Green dark -->
+                            <h5 class="mb-3">Green</h5>
+                            <table class="table  mb-3">
+                                <thead>
+                                <tr>
+                                    <th>Swatch</th>
+                                    <th>Color name</th>
+                                    <th>Specs</th>
+                                    <th>Usages</th>
+                                </tr>
+                                </thead>
+                                <tbody id="table-green-dark-body"></tbody>
+                            </table>
+
+                            <!-- Yellow dark -->
+                            <h5 class="mb-3">Yellow</h5>
+                            <table class="table  mb-3">
+                                <thead>
+                                <tr>
+                                    <th>Swatch</th>
+                                    <th>Color name</th>
+                                    <th>Specs</th>
+                                    <th>Usages</th>
+                                </tr>
+                                </thead>
+                                <tbody id="table-yellow-dark-body"></tbody>
+                            </table>
+
+                            <!-- Red dark -->
+                            <h5 class="mb-3">Red</h5>
+                            <table class="table  mb-3">
+                                <thead>
+                                <tr>
+                                    <th>Swatch</th>
+                                    <th>Color name</th>
+                                    <th>Specs</th>
+                                    <th>Usages</th>
+                                </tr>
+                                </thead>
+                                <tbody id="table-red-dark-body"></tbody>
+                            </table>
+
+                            <!-- Orange dark -->
+                            <h5 class="mb-3">Orange</h5>
+                            <table class="table  mb-3">
+                                <thead>
+                                <tr>
+                                    <th>Swatch</th>
+                                    <th>Color name</th>
+                                    <th>Specs</th>
+                                    <th>Usages</th>
+                                </tr>
+                                </thead>
+                                <tbody id="table-orange-dark-body"></tbody>
+                            </table>
+
+                            <!-- Purple dark -->
+                            <h5 class="mb-3">Purple</h5>
+                            <table class="table  mb-3">
+                                <thead>
+                                <tr>
+                                    <th>Swatch</th>
+                                    <th>Color name</th>
+                                    <th>Specs</th>
+                                    <th>Usages</th>
+                                </tr>
+                                </thead>
+                                <tbody id="table-purple-dark-body"></tbody>
+                            </table>
+
+                            <!-- Teal dark -->
+                            <h5 class="mb-3">Teal</h5>
+                            <table class="table  mb-3">
+                                <thead>
+                                <tr>
+                                    <th>Swatch</th>
+                                    <th>Color name</th>
+                                    <th>Specs</th>
+                                    <th>Usages</th>
+                                </tr>
+                                </thead>
+                                <tbody id="table-teal-dark-body"></tbody>
+                            </table>
+
+
+                        </div>
+                        <!-- End colors -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End body -->
+
+    <!-- Footer -->
+    <footer class="text-center" id="footer"></footer>
+    <!-- End footer -->
+</div>
+
+
+<!-- Scripts -->
+<script src="../assets/js/jetbrains.js"></script>
+<script src="../components/header.js"></script>
+<script src="../components/menu.js"></script>
+<script src="../components/footer.js"></script>
+
+<script>
+    // Light
+    const colors_gray = [
+        {
+            'name': '--gray-14',
+            'Hex': '#FFFFFF',
+            'HSB': '0, 0, 100',
+            'usages': 'Main background (light)',
+            'primary': false,
+            'border': true,
+        },
+        {
+            'name': '--gray-13',
+            'Hex': '#F7F8FA',
+            'HSB': '230, 1, 98',
+            'usages': 'Secondary background (tool windows)<br>Diff removed: Fill',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--gray-12',
+            'Hex': '#EBECF0',
+            'HSB': '226, 2, 94',
+            'usages': 'Lines & separators<br>General icons: Fill',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--gray-11',
+            'Hex': '#DFE1E5',
+            'HSB': '220, 3, 90',
+            'usages': 'Inactive selection',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--gray-10',
+            'Hex': '#D3D5DB',
+            'HSB': '225, 4, 86',
+            'usages': 'Diff removed: Word<br>Diff removed: Stroke',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--gray-9',
+            'Hex': '#C9CCD6',
+            'HSB': '226, 6, 84',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--gray-8',
+            'Hex': '#A8ADBD',
+            'HSB': '226, 11, 74',
+            'usages': 'Disabled text & placeholders Icons & shortcuts on dark bg<br>Diff removed: Stripe mark',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--gray-7',
+            'Hex': '#818594',
+            'HSB': '227, 13, 58',
+            'usages': 'Secondary text',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--gray-6',
+            'Hex': '#6C707E',
+            'HSB': '227, 14, 49',
+            'usages': 'Status bar text<br>General icons: Stroke<br>Outline icons',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--gray-5',
+            'Hex': '#5A5D6B',
+            'HSB': '229, 16, 42',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--gray-4',
+            'Hex': '#494B57',
+            'HSB': '231, 16, 34',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--gray-3',
+            'Hex': '#383A42',
+            'HSB': '230, 15, 26',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--gray-2',
+            'Hex': '#27282E',
+            'HSB': '230, 16, 18',
+            'usages': 'Dark background',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--gray-1',
+            'Hex': '#000000',
+            'HSB': '0, 0, 0',
+            'usages': 'Primary text',
+            'primary': true,
+            'border': false,
+        },
+
+    ]
+    const colors_blue = [
+        {
+            'name': '--blue-13',
+            'Hex': '#F5F8FE',
+            'HSB': '220, 4, 100',
+            'usages': 'Editor: Current line<br>Banner fill',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--blue-12',
+            'Hex': '#EDF3FF',
+            'HSB': '220, 7, 100',
+            'usages': 'Diff changed: Fill<br>General icons: Fill',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--blue-11',
+            'Hex': '#D4E2FF',
+            'HSB': '220, 17, 100',
+            'usages': 'Selection active',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--blue-10',
+            'Hex': '#C2D6FC',
+            'HSB': '219, 23, 99',
+            'usages': 'Banner stroke<br>Diff changed: Stroke<br>Diff changed: Word',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--blue-9',
+            'Hex': '#A0BDF8',
+            'HSB': '220, 35, 97',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--blue-8',
+            'Hex': '#88ADF7',
+            'HSB': '220, 45, 97',
+            'usages': 'Diff changed: Stripe mark',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--blue-7',
+            'Hex': '#709CF5',
+            'HSB': '220, 54, 96',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--blue-6',
+            'Hex': '#588CF3',
+            'HSB': '220, 64, 95',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--blue-5',
+            'Hex': '#4682FA',
+            'HSB': '220, 72, 98',
+            'usages': 'Solid icons',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--blue-4',
+            'Hex': '#3574F0',
+            'HSB': '220, 78, 94',
+            'usages': 'Button: Default<br>General icons: Fill<br>Outline icons',
+            'primary': true,
+            'border': false,
+        },
+        {
+            'name': '--blue-3',
+            'Hex': '#3369D6',
+            'HSB': '220, 76, 84',
+            'usages': 'Button: Hovered',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--blue-2',
+            'Hex': '#315FBD',
+            'HSB': '220, 74, 74',
+            'usages': 'Link<br>Button: Pressed',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--blue-1',
+            'Hex': '#2E55A3',
+            'HSB': '220, 72, 64',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+
+    ]
+    const colors_green = [
+        {
+            'name': '--green-11',
+            'Hex': '#F2FCF3',
+            'HSB': '126, 4, 99',
+            'usages': 'General icons: Fill<br>Banner: Fill<br>Diff added: Fill',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--green-10',
+            'Hex': '#E6F7E9',
+            'HSB': '131, 7, 97',
+            'usages': 'Test root in project tree',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--green-9',
+            'Hex': '#C5E5CC',
+            'HSB': '133, 14, 90',
+            'usages': 'Diff added: Stroke<br>Diff added: Word<br>Banner: Stroke',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--green-8',
+            'Hex': '#AFDBB8',
+            'HSB': '132, 20, 86',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--green-7',
+            'Hex': '#89C398',
+            'HSB': '136, 30, 76',
+            'usages': 'Diff added: Stripe mark',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--green-6',
+            'Hex': '#55A76A',
+            'HSB': '135, 49, 65',
+            'usages': 'Solid icons & modifiers',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--green-5',
+            'Hex': '#369650',
+            'HSB': '136, 64, 59',
+            'usages': 'Outline icons',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--green-4',
+            'Hex': '#208A3C',
+            'HSB': '136, 77, 54',
+            'usages': 'Button: Default<br>General icons: Stroke',
+            'primary': true,
+            'border': false,
+        },
+        {
+            'name': '--green-3',
+            'Hex': '#1F8039',
+            'HSB': '136, 76, 50',
+            'usages': 'Button: Hovered',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--green-2',
+            'Hex': '#1F7536',
+            'HSB': '136, 74, 46',
+            'usages': 'Button: Pressed<br>Text',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--green-1',
+            'Hex': '#1E6B33',
+            'HSB': '136, 72, 42',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+
+    ]
+    const colors_red = [
+        {
+            'name': '--red-11',
+            'Hex': '#FFF7F7',
+            'HSB': '0, 3, 100',
+            'usages': 'General icons: Fill<br>Banner: Fill',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--red-10',
+            'Hex': '#FFF2F3',
+            'HSB': '355, 5, 100',
+            'usages': 'Diff conflict: Fill',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--red-9',
+            'Hex': '#FAD4D8',
+            'HSB': '354, 15, 98',
+            'usages': 'Banner stroke<br>Diff conflict: Strok<br>Diff conflict: Word',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--red-8',
+            'Hex': '#F2B6BB',
+            'HSB': '355, 25, 95',
+            'usages': 'Diff conflict: Stripe mark',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--red-7',
+            'Hex': '#ED99A1',
+            'HSB': '354, 35, 93',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--red-6',
+            'Hex': '#E46A76',
+            'HSB': '354, 54, 89',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--red-5',
+            'Hex': '#E55765',
+            'HSB': '354, 62, 90',
+            'usages': 'Solid icons & modifiers',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--red-4',
+            'Hex': '#DB3B4B',
+            'HSB': '354, 73, 86',
+            'usages': 'Button: Default<br>General icons: Stroke<br>Outline icons',
+            'primary': true,
+            'border': false,
+        },
+        {
+            'name': '--red-3',
+            'Hex': '#CC3645',
+            'HSB': '354, 74, 80',
+            'usages': 'Button: Hovered<br>Validation (error) text',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--red-2',
+            'Hex': '#BC303E',
+            'HSB': '354, 74, 74',
+            'usages': 'Button: Pressed',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--red-1',
+            'Hex': '#AD2B38',
+            'HSB': '354, 75, 68',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+
+    ]
+    const colors_yellow = [
+        {
+            'name': '--yellow-10',
+            'Hex': '#FFFAEB',
+            'HSB': '45, 8, 100',
+            'usages': 'General icons: Fill<br>Banner: Fill',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--yellow-9',
+            'Hex': '#FFF6DE',
+            'HSB': '44, 13, 100',
+            'usages': 'Target root in project tree',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--yellow-8',
+            'Hex': '#FFF1D1',
+            'HSB': '42, 18, 100',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--yellow-7',
+            'Hex': '#FEE6B1',
+            'HSB': '41, 30, 100',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--yellow-6',
+            'Hex': '#FED277',
+            'HSB': '40, 53, 100',
+            'usages': 'Banner: Stroke',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--yellow-5',
+            'Hex': '#FDBD3D',
+            'HSB': '40, 76, 99',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--yellow-4',
+            'Hex': '#FFAF0F',
+            'HSB': '40, 94, 100',
+            'usages': 'Solid icons<br>Outline icons',
+            'primary': true,
+            'border': false,
+        },
+        {
+            'name': '--yellow-3',
+            'Hex': '#DF9303',
+            'HSB': '39, 99, 87',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--yellow-2',
+            'Hex': '#C27D04',
+            'HSB': '38, 98, 76',
+            'usages': 'General icons: Stroke',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--yellow-1',
+            'Hex': '#A46704',
+            'HSB': '37, 98, 64',
+            'usages': 'Text',
+            'primary': false,
+            'border': false,
+        },
+
+    ]
+    const colors_orange = [
+        {
+            'name': '--orange-9',
+            'Hex': '#FFF4EB',
+            'HSB': '27, 8, 100',
+            'usages': 'General icons: Fill',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--orange-8',
+            'Hex': '#FCE6D6',
+            'HSB': '25, 15, 99',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--orange-7',
+            'Hex': '#F9D2B6',
+            'HSB': '25, 27, 98',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--orange-6',
+            'Hex': '#F2B181',
+            'HSB': '25, 47, 95',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--orange-5',
+            'Hex': '#EC8F4C',
+            'HSB': '25, 68, 93',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--orange-4',
+            'Hex': '#E56D17',
+            'HSB': '25, 90, 90',
+            'usages': 'General icons: Stroke<br>Solid icons<br>Outline icons',
+            'primary': true,
+            'border': false,
+        },
+        {
+            'name': '--orange-3',
+            'Hex': '#CE6117',
+            'HSB': '24, 89, 81',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--orange-2',
+            'Hex': '#B85516',
+            'HSB': '23, 88, 72',
+            'usages': 'Text',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--orange-1',
+            'Hex': '#A14916',
+            'HSB': '22, 86, 63',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+
+    ]
+    const colors_purple = [
+        {
+            'name': '--purple-9',
+            'Hex': '#FAF5FF',
+            'HSB': '270, 4, 100',
+            'usages': 'General icons: Fill',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--purple-8',
+            'Hex': '#EFE5FF',
+            'HSB': '263, 10, 100',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--purple-7',
+            'Hex': '#DCCBFB',
+            'HSB': '261, 19, 98',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--purple-6',
+            'Hex': '#BFA1F8',
+            'HSB': '261, 35, 97',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--purple-5',
+            'Hex': '#A177F4',
+            'HSB': '260, 51, 96',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--purple-4',
+            'Hex': '#834DF0',
+            'HSB': '260, 68, 94',
+            'usages': 'General icons: Stroke<br>Solid icons<br>Outline icons',
+            'primary': true,
+            'border': false,
+        },
+        {
+            'name': '--purple-3',
+            'Hex': '#7444D4',
+            'HSB': '260, 68, 83',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--purple-2',
+            'Hex': '#643CB8',
+            'HSB': '259, 67, 72',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--purple-1',
+            'Hex': '#55339C',
+            'HSB': '259, 67, 61',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+
+    ]
+    const colors_teal = [
+        {
+            'name': '--teal-9',
+            'Hex': '#F2FCFC',
+            'HSB': '180, 4, 99',
+            'usages': 'General icons: Fill',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--teal-8',
+            'Hex': '#DAF4F5',
+            'HSB': '182, 11, 96',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--teal-7',
+            'Hex': '#B6E4E5',
+            'HSB': '181, 21, 90',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--teal-6',
+            'Hex': '#7BCCCF',
+            'HSB': '182, 41, 81',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--teal-5',
+            'Hex': '#3FB3B8',
+            'HSB': '182, 66, 72',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--teal-4',
+            'Hex': '#039BA1',
+            'HSB': '182, 98, 63',
+            'usages': 'General icons: Stroke<br>Solid icons<br>Outline icons',
+            'primary': true,
+            'border': false,
+        },
+        {
+            'name': '--teal-3',
+            'Hex': '#058B90',
+            'HSB': '182, 97, 56',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--teal-2',
+            'Hex': '#077A7F',
+            'HSB': '183, 94, 50',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--teal-1',
+            'Hex': '#096A6E',
+            'HSB': '182, 92, 43',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+
+    ]
+
+    // Dark
+    const colors_gray_dark = [
+        {
+            'name': '--gray-14 (White)',
+            'Hex': '#FFFFFF',
+            'HSB': '0, 0, 100',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--gray-13',
+            'Hex': '#F0F1F2',
+            'HSB': '210, 1, 95',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--gray-12',
+            'Hex': '#DFE1E5',
+            'HSB': '220, 3, 90',
+            'usages': 'Primary text',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--gray-11',
+            'Hex': '#CED0D6',
+            'HSB': '225, 4, 84',
+            'usages': 'General icons: Stroke<br>Solid icons<br>Outline icons',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--gray-10',
+            'Hex': '#B4B8BF',
+            'HSB': '218, 6, 75',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--gray-9',
+            'Hex': '#9DA0A8',
+            'HSB': '224, 7, 66',
+            'usages': 'Current line number',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--gray-8',
+            'Hex': '#868A91',
+            'HSB': '218, 8, 57',
+            'usages': 'Text on lighter backgrounds (hints)',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--gray-7',
+            'Hex': '#6F737A',
+            'HSB': '218, 9, 48',
+            'usages': 'Secondary text & icons Disabled text in components',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--gray-6',
+            'Hex': '#5A5D63',
+            'HSB': '220, 9, 39',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--gray-5',
+            'Hex': '#4E5157',
+            'HSB': '220, 10, 34',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--gray-4',
+            'Hex': '#43454A',
+            'HSB': '223, 9, 29',
+            'usages': 'General icons: Fill<br>Inactive selection',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--gray-3',
+            'Hex': '#393B40',
+            'HSB': '223, 11, 25',
+            'usages': 'Lines & separators<br>Tree hover',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--gray-2',
+            'Hex': '#2B2D30',
+            'HSB': '216, 10, 19',
+            'usages': 'Secondary background (tool windows, dialogs, tooltips)',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--gray-1',
+            'Hex': '#1E1F22',
+            'HSB': '225, 12, 13',
+            'usages': 'Main background (editor)',
+            'primary': true,
+            'border': true,
+        },
+
+    ]
+    const colors_blue_dark = [
+        {
+            'name': '--blue-11',
+            'Hex': '#99BBFF',
+            'HSB': '220, 40, 100',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--blue-10',
+            'Hex': '#83ACFC',
+            'HSB': '220, 48, 99',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--blue-9',
+            'Hex': '#6B9BFA',
+            'HSB': '220, 57, 98',
+            'usages': 'Link',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--blue-8',
+            'Hex': '#548AF7',
+            'HSB': '220, 66, 97',
+            'usages': 'General icons: Stroke<br>Solid icons<br>Outline icons',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--blue-7',
+            'Hex': '#467FF2',
+            'HSB': '220, 71, 95',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--blue-6',
+            'Hex': '#3574F0',
+            'HSB': '220, 78, 94',
+            'usages': 'Button: Default',
+            'primary': true,
+            'border': false,
+        },
+        {
+            'name': '--blue-5',
+            'Hex': '#366ACF',
+            'HSB': '220, 74, 81',
+            'usages': 'Button: Hovered',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--blue-4',
+            'Hex': '#375FAD',
+            'HSB': '220, 68, 68',
+            'usages': 'Button: Pressed',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--blue-3',
+            'Hex': '#35538F',
+            'HSB': '220, 63, 56',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--blue-2',
+            'Hex': '#2E436E',
+            'HSB': '220, 58, 43',
+            'usages': 'Selection in tool windows',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--blue-1',
+            'Hex': '#25324D',
+            'HSB': '221, 52, 30',
+            'usages': 'General icons: Fill<br>Editor: Selection',
+            'primary': false,
+            'border': false,
+        },
+
+    ]
+    const colors_green_dark = [
+        {
+            'name': '--green-11',
+            'Hex': '#D4FAD7',
+            'HSB': '125, 15, 98',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--green-10',
+            'Hex': '#B9EBBD',
+            'HSB': '124, 21, 92',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--green-9',
+            'Hex': '#A0DBA5',
+            'HSB': '124, 27, 86',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--green-8',
+            'Hex': '#89CC8E',
+            'HSB': '125, 33, 80',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--green-7',
+            'Hex': '#73BD79',
+            'HSB': '125, 39, 74',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--green-6',
+            'Hex': '#5FAD65',
+            'HSB': '125, 45, 68',
+            'usages': 'Success icons',
+            'primary': true,
+            'border': false,
+        },
+        {
+            'name': '--green-5',
+            'Hex': '#57965C',
+            'HSB': '125, 42, 59',
+            'usages': 'General icons: Stroke<br>Solid icons<br>Outline icons',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--green-4',
+            'Hex': '#4E8052',
+            'HSB': '125, 39, 50',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--green-3',
+            'Hex': '#436946',
+            'HSB': '125, 36, 41',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--green-2',
+            'Hex': '#375239',
+            'HSB': '125, 33, 32',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--green-1',
+            'Hex': '#253627',
+            'HSB': '125, 30, 21',
+            'usages': 'General icons: Fill',
+            'primary': false,
+            'border': false,
+        },
+
+    ]
+    const colors_yellow_dark = [
+        {
+            'name': '--yellow-11',
+            'Hex': '#FFF6BD',
+            'HSB': '52, 26, 100',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--yellow-10',
+            'Hex': '#FCEBA4',
+            'HSB': '48, 35, 99',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--yellow-9',
+            'Hex': '#F7DE8B',
+            'HSB': '46, 44, 97',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--yellow-8',
+            'Hex': '#F5D273',
+            'HSB': '44, 53, 96',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--yellow-7',
+            'Hex': '#F2C55C',
+            'HSB': '42, 62, 95',
+            'usages': 'Solid icons<br>Outline icons',
+            'primary': true,
+            'border': false,
+        },
+        {
+            'name': '--yellow-6',
+            'Hex': '#D6AE58',
+            'HSB': '41, 59, 84',
+            'usages': 'General icons: Stroke',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--yellow-5',
+            'Hex': '#BA9752',
+            'HSB': '40, 56, 73',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--yellow-4',
+            'Hex': '#9E814A',
+            'HSB': '39, 53, 62',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--yellow-3',
+            'Hex': '#826A41',
+            'HSB': '38, 50, 51',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--yellow-2',
+            'Hex': '#5E4D33',
+            'HSB': '36, 46, 37',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--yellow-1',
+            'Hex': '#3D3223',
+            'HSB': '34, 42, 24',
+            'usages': 'General icons: Fill',
+            'primary': false,
+            'border': false,
+        },
+
+    ]
+    const colors_red_dark = [
+        {
+            'name': '--red-11',
+            'Hex': '#FAE3DE',
+            'HSB': '11, 11, 98',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--red-10',
+            'Hex': '#F7CCC6',
+            'HSB': '7, 20, 97',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--red-9',
+            'Hex': '#F2B1AA',
+            'HSB': '6, 30, 95',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--red-8',
+            'Hex': '#EB938D',
+            'HSB': '4, 40, 92',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--red-7',
+            'Hex': '#E37774',
+            'HSB': '2, 49, 89',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--red-6',
+            'Hex': '#DB5C5C',
+            'HSB': '0, 58, 86',
+            'usages': 'General icons: Stroke<br>Solid icons<br>Outline icons',
+            'primary': true,
+            'border': false,
+        },
+        {
+            'name': '--red-5',
+            'Hex': '#BD5757',
+            'HSB': '0, 54, 74',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--red-4',
+            'Hex': '#9C4E4E',
+            'HSB': '0, 50, 61',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--red-3',
+            'Hex': '#7A4343',
+            'HSB': '0, 45, 48',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--red-2',
+            'Hex': '#5E3838',
+            'HSB': '0, 40, 37',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--red-1',
+            'Hex': '#402929',
+            'HSB': '0, 35, 25',
+            'usages': 'General icons: Fill',
+            'primary': false,
+            'border': false,
+        },
+
+    ]
+    const colors_orange_dark = [
+        {
+            'name': '--orange-11',
+            'Hex': '#FFDFC7',
+            'HSB': '26, 22, 100',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--orange-10',
+            'Hex': '#FACEAF',
+            'HSB': '25, 30, 98',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--orange-9',
+            'Hex': '#F5BD98',
+            'HSB': '24, 38, 96',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--orange-8',
+            'Hex': '#F0AC81',
+            'HSB': '23, 46, 94',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--orange-7',
+            'Hex': '#E5986C',
+            'HSB': '22, 53, 90',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--orange-6',
+            'Hex': '#E08855',
+            'HSB': '22, 62, 88',
+            'usages': '',
+            'primary': true,
+            'border': false,
+        },
+        {
+            'name': '--orange-5',
+            'Hex': '#C77D55',
+            'HSB': '21, 57, 78',
+            'usages': 'General icons: Stroke<br>Solid icons<br>Outline icons',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--orange-4',
+            'Hex': '#A36B4E',
+            'HSB': '20, 52, 64',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--orange-3',
+            'Hex': '#825845',
+            'HSB': '19, 47, 51',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--orange-2',
+            'Hex': '#614438',
+            'HSB': '18, 42, 38',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--orange-1',
+            'Hex': '#45322B',
+            'HSB': '17, 38, 27',
+            'usages': 'General icons: Fill',
+            'primary': false,
+            'border': false,
+        },
+
+    ]
+    const colors_purple_dark = [
+        {
+            'name': '--purple-11',
+            'Hex': '#E4CEFF',
+            'HSB': '267, 19, 100',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--purple-10',
+            'Hex': '#D4B8F9',
+            'HSB': '266, 26, 98',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--purple-9',
+            'Hex': '#C4A0F3',
+            'HSB': '266, 34, 95',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--purple-8',
+            'Hex': '#B589EC',
+            'HSB': '267, 42, 93',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--purple-7',
+            'Hex': '#A571E6',
+            'HSB': '267, 51, 90',
+            'usages': 'General icons: Stroke<br>Solid icons<br>Outline icons',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--purple-6',
+            'Hex': '#955AE0',
+            'HSB': '266, 60, 88',
+            'usages': '',
+            'primary': true,
+            'border': false,
+        },
+        {
+            'name': '--purple-5',
+            'Hex': '#8150BE',
+            'HSB': '267, 58, 75',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--purple-4',
+            'Hex': '#6C469C',
+            'HSB': '267, 55, 61',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--purple-3',
+            'Hex': '#583D7A',
+            'HSB': '267, 50, 48',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--purple-2',
+            'Hex': '#433358',
+            'HSB': '266, 42, 35',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--purple-1',
+            'Hex': '#2F2936',
+            'HSB': '270, 23, 21',
+            'usages': 'General icons: Fill',
+            'primary': false,
+            'border': false,
+        },
+
+    ]
+    const colors_teal_dark = [
+        {
+            'name': '--teal-11',
+            'Hex': '#B9EBE6',
+            'HSB': '174, 21, 92',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--teal-10',
+            'Hex': '#9BDDD6',
+            'HSB': '174, 30, 87',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--teal-9',
+            'Hex': '#7DCEC5',
+            'HSB': '173, 39, 81',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--teal-8',
+            'Hex': '#60C0B5',
+            'HSB': '173, 50, 75',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--teal-7',
+            'Hex': '#42B1A4',
+            'HSB': '173, 63, 69',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--teal-6',
+            'Hex': '#24A394',
+            'HSB': '173, 78, 64',
+            'usages': 'General icons: Stroke<br>Solid icons<br>Outline icons',
+            'primary': true,
+            'border': false,
+        },
+        {
+            'name': '--teal-5',
+            'Hex': '#238E82',
+            'HSB': '173, 78, 64',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--teal-4',
+            'Hex': '#21786F',
+            'HSB': '174, 72, 47',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--teal-3',
+            'Hex': '#20635D',
+            'HSB': '175, 68, 39',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--teal-2',
+            'Hex': '#1E4D4A',
+            'HSB': '176, 61, 30',
+            'usages': '',
+            'primary': false,
+            'border': false,
+        },
+        {
+            'name': '--teal-1',
+            'Hex': '#1D3838',
+            'HSB': '180, 49, 22',
+            'usages': 'General icons: Fill',
+            'primary': false,
+            'border': false,
+        },
+
+    ]
+
+    function colorTableGenerate(colors_list) {
+        let result = ''
+
+        colors_list.forEach((color_item) => {
+            result += '<tr>\n' +
+                '    <td><div class="color-swath" style="background: ' + color_item['Hex'] + '; ' + ((color_item['border']) ? 'border: 1px solid #eee' : '') + '"></div></td>\n' +
+                '    <td>' + ((color_item['primary']) ? '<b>' + color_item['name'] + ' (Primary)</b>' : color_item['name']) + '</td>\n' +
+                '    <td><span class="color-specs">Hex:</span> ' + color_item['Hex'] + ' <br><span class="color-specs">HSB:</span> ' + color_item['HSB'] + '</td>\n' +
+                '    <td>' + color_item['usages'] + '</td>\n' +
+                '</tr>'
+        })
+
+        return result
+    }
+
+    document.addEventListener('DOMContentLoaded', function(){
+        const table_gray_body = document.querySelector('#table-gray-body')
+        table_gray_body.innerHTML = colorTableGenerate(colors_gray)
+
+        const table_blue_body = document.querySelector('#table-blue-body')
+        table_blue_body.innerHTML = colorTableGenerate(colors_blue)
+
+        const table_green_body = document.querySelector('#table-green-body')
+        table_green_body.innerHTML = colorTableGenerate(colors_green)
+
+        const table_red_body = document.querySelector('#table-red-body')
+        table_red_body.innerHTML = colorTableGenerate(colors_red)
+
+        const table_yellow_body = document.querySelector('#table-yellow-body')
+        table_yellow_body.innerHTML = colorTableGenerate(colors_yellow)
+
+        const table_orange_body = document.querySelector('#table-orange-body')
+        table_orange_body.innerHTML = colorTableGenerate(colors_orange)
+
+        const table_purple_body = document.querySelector('#table-purple-body')
+        table_purple_body.innerHTML = colorTableGenerate(colors_purple)
+
+        const table_teal_body = document.querySelector('#table-teal-body')
+        table_teal_body.innerHTML = colorTableGenerate(colors_teal)
+
+        //----- Dark theme -----//
+
+        const table_gray_dark_body = document.querySelector('#table-gray-dark-body')
+        table_gray_dark_body.innerHTML = colorTableGenerate(colors_gray_dark)
+
+        const table_blue_dark_body = document.querySelector('#table-blue-dark-body')
+        table_blue_dark_body.innerHTML = colorTableGenerate(colors_blue_dark)
+
+        const table_green_dark_body = document.querySelector('#table-green-dark-body')
+        table_green_dark_body.innerHTML = colorTableGenerate(colors_green_dark)
+
+        const table_yellow_dark_body = document.querySelector('#table-yellow-dark-body')
+        table_yellow_dark_body.innerHTML = colorTableGenerate(colors_yellow_dark)
+
+        const table_red_dark_body = document.querySelector('#table-red-dark-body')
+        table_red_dark_body.innerHTML = colorTableGenerate(colors_red_dark)
+
+        const table_orange_dark_body = document.querySelector('#table-orange-dark-body')
+        table_orange_dark_body.innerHTML = colorTableGenerate(colors_orange_dark)
+
+        const table_purple_dark_body = document.querySelector('#table-purple-dark-body')
+        table_purple_dark_body.innerHTML = colorTableGenerate(colors_purple_dark)
+
+        const table_teal_dark_body = document.querySelector('#table-teal-dark-body')
+        table_teal_dark_body.innerHTML = colorTableGenerate(colors_teal_dark)
+
+
+    });
+</script>
+<!-- End scripts -->
+</body>
+</html>

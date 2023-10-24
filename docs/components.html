@@ -9,7 +9,7 @@
 
     <!-- Style -->
     <link href="assets/css/jetbrains.css" rel="stylesheet">
-    <link href="assets/css/components.css" rel="stylesheet">
+    <link href="assets/css/jetbrains-components.css" rel="stylesheet">
     <!-- End style -->
 </head>
 <body class="">
@@ -27,7 +27,10 @@
 
     <hr>
 
+    <!-- Typography -->
     <div style="padding: 20px">
+        <h6>Typography</h6><br>
+
         <h1>H1</h1><br>
         <h2>H2</h2><br>
         <h3>H3</h3><br>
@@ -37,9 +40,12 @@
 
         <span>⌘⌥A</span>
     </div>
+    <!-- End typography -->
 
     <!-- Gradient -->
     <div style="padding: 20px">
+        <h6>Gradient</h6><br>
+
         <div style="width: 500px; height: 40px; background: var(--gradient-1)"></div><br>
         <div style="width: 500px; height: 40px; background: var(--gradient-2)"></div><br>
         <div style="width: 500px; height: 40px; background: var(--gradient-3)"></div><br>
@@ -54,6 +60,8 @@
 
     <!-- Buttons -->
     <div style="padding: 20px">
+        <h6>Buttons</h6><br>
+
         <button class="btn btn-secondary btn-min-size">Secondary</button>
         <button class="btn btn-primary btn-min-size">Primary</button>
         <button class="btn btn-success btn-min-size">Success</button>
@@ -69,6 +77,8 @@
 
     <!-- Checkbox -->
     <div style="padding: 20px">
+        <h6>Checkbox</h6><br>
+
         <div>
             <input class="checkbox" type="checkbox" id="checkbox-1" >
             <label for="checkbox-1">Text</label>
@@ -82,6 +92,8 @@
 
     <!-- Radio -->
     <div style="padding: 20px">
+        <h6>Radio</h6><br>
+
         <div class="form-check">
             <input class="radio" type="radio" name="flexRadioDefault" id="radio-1">
             <label for="radio-1">
@@ -99,6 +111,8 @@
 
     <!-- Input -->
     <div style="padding: 20px">
+        <h6>Input</h6><br>
+
         <input class="input" value="text">
         <br><br>
         <input class="input input-fill" value="text">
@@ -108,14 +122,33 @@
         <input class="input input-validated" value="text">
         <br><br>
         <input class="input" value="text" disabled>
+        <br><br>
+
+        Large
+        <br><br>
+
+        <input class="input input-large" value="text">
+        <br><br>
+        <input class="input input-large input-fill" value="text">
+        <br><br>
+        <input class="input input-large input-fill" value="text" type="password">
+        <br><br>
+        <input class="input input-large input-validated" value="text">
+        <br><br>
+        <input class="input input-large" value="text" disabled>
+        <br><br>
     </div>
     <!-- End input -->
 
     <!-- Select -->
     <div style="padding: 20px">
+        <h6>Select</h6><br>
+
         <div class="select">
             <button id="select-btn-1" class="select__button">select</button>
             <ul class="select__list">
+                <li class="select__list-item" data-value="8">Select font size</li>
+                <li class="select__list-delimiter"></li>
                 <li class="select__list-item" data-value="8">8 pt</li>
                 <li class="select__list-item" data-value="9">9 pt</li>
                 <li class="select__list-item" data-value="10">10 pt</li>
@@ -130,9 +163,11 @@
 
         <br>
 
-        <div class="select">
+        <div class="select select-large">
             <button id="select-btn-2" class="select__button">select</button>
             <ul class="select__list">
+                <li class="select__list-item" data-value="8">Select font size</li>
+                <li class="select__list-delimiter"></li>
                 <li class="select__list-item" data-value="8">8 pt</li>
                 <li class="select__list-item" data-value="9">9 pt</li>
                 <li class="select__list-item" data-value="10">10 pt</li>
@@ -142,8 +177,42 @@
     </div>
     <!-- End select -->
 
+    <!-- Drop down -->
+    <div style="padding: 20px">
+        <h6>Drop down</h6><br>
+
+        <div class="drop-down" >
+            <a id="drop-down-btn-1" class="drop-down__button">Drop down left</a>
+            <ul class="drop-down__list">
+                <li class="drop-down__list-item" data-value="8"><h6>Профиль</h6></li>
+                <li class="drop-down__list-delimiter"></li>
+                <li class="drop-down__list-item" data-value="8"><a class="link link-default " href="#">Реактор тестов</a></li>
+                <li class="drop-down__list-item" data-value="8"><a class="link link-default " href="#">Отчимтить кеш</a></li>
+                <li class="drop-down__list-delimiter"></li>
+                <li class="drop-down__list-item" data-value="8"><a class="link link-default " href="#">Выход</a></li>
+            </ul>
+        </div>
+
+        <br>
+
+        <div class="drop-down" >
+            <a id="drop-down-btn-2" class="drop-down__button">Drop down right</a>
+            <ul class="drop-down__list drop-down__list-right">
+                <li class="drop-down__list-item" data-value="8"><h6>Профиль</h6></li>
+                <li class="drop-down__list-delimiter"></li>
+                <li class="drop-down__list-item" data-value="8"><a class="link link-default " href="#">Реактор тестов</a></li>
+                <li class="drop-down__list-item" data-value="8"><a class="link link-default " href="#">Отчимтить кеш</a></li>
+                <li class="drop-down__list-delimiter"></li>
+                <li class="drop-down__list-item" data-value="8"><a class="link link-default " href="#">Выход</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- End drop down -->
+
     <!-- Link -->
     <div style="padding: 20px">
+        <h6>Link</h6><br>
+
         <a class="link" href="#">Link</a>
         <span class="link link-disabled" href="#">Link</span>
     </div>
@@ -151,6 +220,8 @@
 
     <!-- Modal -->
     <div style="padding: 20px">
+        <h6>Modal</h6><br>
+
         <button class="btn btn-secondary" onclick="showModal1()">Show modal</button>
         <button class="btn btn-secondary" onclick="showModal2()">Show modal 2</button>
 
@@ -203,13 +274,16 @@
 
     <!-- Hr -->
     <div style="padding: 20px">
-        Hr
+        <h6>Hr</h6><br>
+
         <hr>
     </div>
     <!-- End ht -->
 
     <!-- Table -->
     <div style="padding: 20px">
+        <h6>Table</h6><br>
+
         <table class="table table-hover">
             <thead>
             <tr>
@@ -270,6 +344,8 @@
 
     <!-- Tab -->
     <div style="padding: 20px">
+        <h6>Tab</h6><br>
+
         <ul class="tabs">
             <li>Info</li>
             <li class="tab-selected">Versions</li>
@@ -281,6 +357,9 @@
 
     <!-- Tree -->
     <div style="padding: 20px">
+        <h6>Tree</h6><br>
+
+        <label>One click</label><br>
         <ul class="tree">
             <li><div class="tree-item">Level 1</div></li>
             <li>
@@ -306,7 +385,8 @@
 
         <br>
 
-        <ul class="tree">
+        <label>Double click</label><br>
+        <ul class="tree" dblclick>
             <li><div class="tree-item">Level 1</div></li>
             <li>
                 <div class="tree-item tree-active">
@@ -336,6 +416,8 @@
 
     <!-- Circle background -->
     <div style="padding: 20px">
+        <h6>Circle background</h6><br>
+
         <div class="circle-background" style="width: 300px; height: 500px; margin: 10px; display: inline-block" hovercolor="red"></div>
         <div class="circle-background" style="width: 300px; height: 500px; margin: 10px; display: inline-block"></div>
     </div>
@@ -343,6 +425,8 @@
 
     <!-- Loader -->
     <div style="padding: 20px">
+        <h6>Loader</h6><br>
+
         <div class="loader loader-small"></div>
         <div class="loader"></div>
     </div>
@@ -350,16 +434,31 @@
 
     <!-- Progress -->
     <div style="padding: 20px">
-        <div class="input-group">
-            <label class="progress-label" for="file">Indexing...</label>
-            <progress id="file" max="100" value="70" class="progress"></progress>
-            <button class="btn btn-stop"></button>
+        <h6>Progress</h6><br>
+
+        <div class="progress">
+            <div class="progress-loader">
+                <label class="progress-label" for="file">Indexing...</label>
+                <progress id="file" max="100" value="70" class="progress-bar"></progress>
+            </div>
+        </div>
+
+        <br><br><br>
+
+        <div class="progress">
+            <div class="progress-loader progress-vertical">
+                <label class="progress-label-top" for="file-2">Updating indices...</label>
+                <progress id="file-2" max="100" value="70" class="progress-bar"></progress>
+                <label class="progress-label" for="file-2">C:/Users/jetbrains/.rvm/gems/ruby-2.3.3/active_job</label>
+            </div>
         </div>
     </div>
     <!-- End progress -->
 
     <!-- Segment -->
     <div style="padding: 20px">
+        <h6>Segment</h6><br>
+
         <ul class="segment">
             <li>Java</li>
             <li class="segment-active">Kotlin</li>
@@ -382,12 +481,16 @@
 
     <!-- Block -->
     <div style="padding: 20px">
+        <h6>Block</h6><br>
+
         <div class="block">test</div>
     </div>
     <!-- End block -->
 
     <!-- Code -->
     <div style="padding: 20px">
+        <h6>Code</h6><br>
+
         <code>print('Hello world', 0123456789) -> >=</code>
     </div>
     <!-- End code -->

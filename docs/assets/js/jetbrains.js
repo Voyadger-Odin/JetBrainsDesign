@@ -60,6 +60,63 @@ document.querySelectorAll('.select').forEach(function (selectWrapper) {
 })
 // End select
 
+// Drop-down
+document.querySelectorAll('.drop-down').forEach(function (dropDownWrapper) {
+    const dropDownBtn = dropDownWrapper.querySelector('.drop-down__button')
+    const dropDownList = dropDownWrapper.querySelector('.drop-down__list')
+    const dropDownListItems = dropDownWrapper.querySelectorAll('.drop-down__list-item')
+
+    function dropDownClose() {
+        if(dropDownList.getAttribute('open') === null){return}
+        dropDownList.setAttribute('closing', '')
+        dropDownList.addEventListener(
+            "animationend",
+            () => {
+                dropDownList.removeAttribute("closing");
+                dropDownList.removeAttribute('open')
+            },
+            {
+                once: true
+            }
+        );
+    }
+
+    // Клик по кнопки. Открыть / Закрыть Drop-down
+    dropDownBtn.addEventListener('click', function (event){
+        if(dropDownList.getAttribute('open') === null){
+            dropDownList.setAttribute('open', '')
+        }else{
+            dropDownClose()
+        }
+    })
+
+    // Выбор элемента из списка
+    dropDownListItems.forEach(function (listItem) {
+        listItem.addEventListener('click', function (event) {
+            event.stopPropagation()
+            dropDownBtn.focus()
+            dropDownClose()
+        })
+    })
+
+    // Клик по документу
+    document.addEventListener('click', function (event) {
+        // Закрыть select
+        if (event.target !== dropDownBtn){
+            dropDownClose()
+        }
+    })
+
+    // Нажание на Escape
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape'){
+            // Закрыть select
+            dropDownClose()
+        }
+    })
+})
+// End Drop-down
+
 // Modal
 function showModal(modal) {
     modal.setAttribute('open', '')
@@ -111,20 +168,34 @@ function closeModal2(){
 
 
 // Tree
-function treeRecursive(node, level= 1){
+function treeRecursive(node, level= 1, dblclick= false){
+    if (level === 1){
+        dblclick = node.getAttribute('dblclick') !== null
+    }
+
     node.querySelectorAll(':scope > li').forEach(function (tree_item_li) {
         const tree_item = tree_item_li.querySelector('.tree-item')
         tree_item.style.paddingLeft = (level * (16 + 4) + (4 + 2)) + 'px'
         tree_item.style.setProperty('--arrow-left-position', (level * (16 + 4) + 4) + 'px')
 
-        tree_item.addEventListener('dblclick', function (event) {
-            const tree_nested = this.parentElement.querySelector('.tree-nested')
-            this.classList.toggle('tree-active')
-        })
+        function nodeOpen(node){
+            const tree_nested = node.parentElement.querySelector('.tree-nested')
+            node.classList.toggle('tree-active')
+        }
+
+        if (dblclick){
+            tree_item.addEventListener('dblclick', function (event) {
+                nodeOpen(this)
+            })
+        }else{
+            tree_item.addEventListener('click', function (event) {
+                nodeOpen(this)
+            })
+        }
 
         const tree_nested = tree_item_li.querySelector('.tree-nested')
         if (tree_nested !== null){
-            treeRecursive(tree_nested, level + 1)
+            treeRecursive(tree_nested, level + 1, dblclick)
         }
     })
 }
